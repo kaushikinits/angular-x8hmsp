@@ -26,6 +26,7 @@ export class ProfileEditorComponent implements OnInit {
   }
 
   get NameLists() {
+    console.log("profileForm", this.profileForm);
     return this.profileForm.get("NameList") as FormArray;
   }
 

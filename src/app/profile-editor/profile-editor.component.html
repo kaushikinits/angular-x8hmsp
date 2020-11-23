@@ -1,20 +1,15 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-  <div formArrayName="NameList">
+  <!-- <div formArrayName="NameList"> -->
     <h3>Aliases</h3>
     <button (click)="addAlias()">Add Person</button>
 
     <div *ngFor="let n of NameLists.controls; let i=index">
-      <!-- The repeated alias template -->
-      <!-- <label>
-        Alias
-        <input type="text" [formControlName]="i">
-      </label> -->
       <app-form-data
         [FormRefrence]="i"
         [formGroup]="profileForm"
       ></app-form-data>
     </div>
-  </div>
+  <!-- </div> -->
 
   <button type="submit" [disabled]="!profileForm.valid">Submit</button>
 </form>

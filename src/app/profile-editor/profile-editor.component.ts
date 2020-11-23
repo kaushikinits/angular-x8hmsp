@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { Validators } from "@angular/forms";
 import { FormArray } from "@angular/forms";
@@ -8,10 +8,14 @@ import { FormArray } from "@angular/forms";
   templateUrl: "./profile-editor.component.html",
   styleUrls: []
 })
-export class ProfileEditorComponent {
+export class ProfileEditorComponent implements OnInit {
   profileForm = this.fb.group({
     NameList: this.fb.array([])
   });
+
+  ngOnInit() {
+    this.addAlias();
+  }
 
   getFormGroup(): FormGroup {
     return this.fb.group({
@@ -29,7 +33,6 @@ export class ProfileEditorComponent {
 
   addAlias() {
     this.NameLists.push(this.getFormGroup());
-    console.log("namelist", this.NameLists, this.profileForm);
   }
 
   onSubmit() {

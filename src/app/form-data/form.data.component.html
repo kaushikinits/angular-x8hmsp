@@ -1,16 +1,20 @@
-<div>
-  <label>
-    First Name:
-    <input type="text" formControlName="firstName" required />
-  </label>
+<div [formGroup]="form">
+  <div formGroupName="NameList">
+    <div [formGroupName]="FormRefrence">
+      <label>
+        First Name:
+        <input type="text" formControlName="firstName" required />
+      </label>
 
-  <label>
-    Last Name:
-    <input type="text" formControlName="lastName" />
-  </label>
+      <label>
+        Last Name:
+        <input type="text" formControlName="lastName" />
+      </label>
 
-  <label>
-    City:
-    <input type="text" formControlName="city" />
-  </label>
+      <label>
+        City:
+        <input type="text" formControlName="city" />
+      </label>
+    </div>
+  </div>
 </div>

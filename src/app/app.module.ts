@@ -1,16 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { ReactiveFormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
-import { NameEditorComponent } from './name-editor/name-editor.component';
-import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { AppComponent } from "./app.component";
+import { NameEditorComponent } from "./name-editor/name-editor.component";
+import { ProfileEditorComponent } from "./profile-editor/profile-editor.component";
+import { FormDataComponent } from "./form-data/form.data.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NameEditorComponent,
-    ProfileEditorComponent
+    ProfileEditorComponent,
+    FormDataComponent
   ],
   imports: [
     BrowserModule,
@@ -20,8 +22,7 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
-
+export class AppModule {}
 
 /*
 Copyright Google LLC. All Rights Reserved.

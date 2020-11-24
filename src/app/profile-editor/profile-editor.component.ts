@@ -19,7 +19,7 @@ export class ProfileEditorComponent implements OnInit {
 
   getFormGroup(): FormGroup {
     return this.fb.group({
-      firstName: ["", Validators.required],
+      firstName: ["", [Validators.required, Validators.minLength(3)]],
       lastName: [""],
       city: [""]
     });
